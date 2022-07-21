@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(215, 214, 200);
+  background: radial-gradient(circle, rgba(215, 214, 200, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span{
+  font-size:45px;
+  margin: -2px;
+}
+
+h1.title {
+  font-family: 'Mochiy Pop One', sans-serif;
+  text-align: center;
+  margin: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 4em;
+  color: aliceblue;
+}
+
+.timer {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  padding-left: 2px;
+  margin: auto;
+  left: 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  background-color: gray;
+  color: aliceblue;
+  width: 200px;
+  box-shadow: 5px 5px 3px 0px #000;
+  border: none;
+  font-size: 30px;
+}
+
+.points {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  left: 0;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  background-color: gray;
+  color: aliceblue;
+  width: 200px;
+  box-shadow: 5px 5px 3px 0px #000;
+  border: none;
+  font-size: 36px;
+}
+
+.lives {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  right: 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  background-color: gray;
+  color: aliceblue;
+  width: 200px;
+  box-shadow: 5px 5px 3px 0px #000;
+  border: none;
+  font-size: 36px;
+}
+
+table {
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+tr,
+td {
+  border: 1px solid rgb(86, 108, 116);
+  text-align: center;
+}
+
+td {
+  cursor: pointer;
+  background-color: grey;
+  width: 35px;
+  height: 35px;
+  border: 1px solid grey;
+
+
+
+}
+
+td:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+  width: 35px;
+  height: 35px;
+  border: 1px solid grey;
+
+
+}
+
+td.clicked {
+  background-color: aliceblue;
+}
+
+.buttons {
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+.beginner,
+.medium,
+.expert {
+
+  cursor: pointer;
+  background-color: grey;
+  font-size: 1em;
+  color: aliceblue;
+  padding: 15px;
+  border: none;
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-right: 10px;
+
+}
+
+.beginner:hover,
+.medium:hover,
+.expert:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+  border: none;
+  box-shadow: 5px 5px 10px 1px #000;
+}
+
+footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 5px;
+  color: aliceblue;
+  
+  
+}
