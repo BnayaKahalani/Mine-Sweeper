@@ -6,9 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mine Sweeper</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,9 +27,9 @@
     <div class="lives">
     </div>
     <div class="flags">
-      🏴 
+      🏴
     </div>
-    <!-- <div class="record"></div> -->
+    <div class="record" id="open">Click for highest scores! </div>
 
 
     <h1 class="title">Mine Swe<span onclick="initGame()">😃</span>per</h1>
@@ -39,6 +45,22 @@
   <table class="board">
     <tbody></tbody>
   </table>
+
+  <div class="modal-container" id="modal-container">
+    <div class="modal">
+      <h1>Highest Scores</h1>
+      <p> Here should be the highest scores stored in the local storage
+          <br>
+          <br>
+          Beginner: <br>
+          Medium: <br>
+          Expert:
+      </p>
+      <button class="close" id="close">
+        Close
+      </button>
+    </div>
+  </div>
 
   <footer>
     &copy Bnaya Kahalani

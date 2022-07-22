@@ -50,7 +50,7 @@ h1.title {
   padding: 15px;
   padding-left: 2px;
   margin: auto;
-  left: 0;
+  right: 0;
   margin-bottom: 30px;
   margin-top: 20px;
   background-color: gray;
@@ -59,14 +59,16 @@ h1.title {
   box-shadow: 5px 5px 3px 0px #000;
   border: none;
   font-size: 35px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-family: digital-7;
-  animation: fade-in-left 1s ease 0s 1 normal forwards;
+  animation: fade-in-right 1s ease 0s 1 normal forwards;
 }
 
 .flags {
   position: absolute;
   text-align: auto;
   padding: 11px;
+  padding-left: 25px;
   margin: auto;
   left: 0;
   margin-bottom: 30px;
@@ -83,18 +85,18 @@ h1.title {
 .lives {
   position: absolute;
   text-align: center;
-  padding: 17px;
+  padding: 13px;
   margin: auto;
-  right: 0;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  left: 0;
+  margin-bottom: 27px;
+  margin-top: 17px;
   background-color: gray;
   color: aliceblue;
   width: 200px;
   box-shadow: 5px 5px 3px 0px #000;
   border: none;
   font-size: 36px;
-  animation: fade-in-right 1s ease 0s 1 normal forwards;
+  animation: fade-in-left 1s ease 0s 1 normal forwards;
 }
 
 @keyframes fade-in-left {
@@ -119,6 +121,26 @@ h1.title {
 		opacity: 1;
 		transform: translateX(0);
 	}
+}
+
+.record {
+  position: absolute;
+  text-align: center;
+  padding: 25px;
+  padding-left: 18px;
+  margin: auto;
+  right: 0;
+  margin-bottom: 30px;
+  margin-top: 115px;
+  background-color: gray;
+  color: aliceblue;
+  width: 200px;
+  box-shadow: 5px 5px 3px 0px #000;
+  border: none;
+  font-size: 17px;
+  font-family: 'Lobster', cursive;
+  animation: fade-in-right 1s ease 0s 1 normal forwards;
+  cursor: pointer;
 }
 
 table {
@@ -176,7 +198,7 @@ td.flagged {
   border: none;
   box-shadow: 5px 5px 10px 1px #000;
   margin-right: 10px;
-
+  font-family: 'Lobster', cursive;
 }
 
 .beginner:hover,
@@ -186,6 +208,7 @@ td.flagged {
   background-color: lightgrey;
   border: none;
   box-shadow: 5px 5px 10px 1px #000;
+  font-family: 'Lobster', cursive;
 }
 
 footer {
@@ -193,6 +216,34 @@ footer {
   padding: 10px 10px 0px 10px;
   bottom: 5px;
   color: aliceblue;
+}
 
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  opacity: 0;
+  left: 0;
+  height: 100vh;
+  width:217vh;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
 
 }

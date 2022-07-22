@@ -42,6 +42,7 @@ function initGame() {
   clearInterval(gTimer)
   elDivTime.innerText = "00:00:000"
   elSpan.innerText = NORMAL_IMG
+  elDiv.innerText = FLAG_IMG
   renderLives()
 
   gBoard = buildBoard()
@@ -97,7 +98,6 @@ function buildBoard() {
 
   return board
 }
-
 
 function renderBoard(board) {
   // Render the board as a <table> to the page
@@ -295,7 +295,8 @@ function checkGameOver() {
 
     gameOver()
 
-  } else if (gGame.shownCount + gGame.markedCount === gLevel.SIZE ** 2) {
+  } else if (gGame.shownCount + gGame.markedCount === gLevel.SIZE ** 2 &&
+             gGame.markedCount <= gLevel.MINES) {
     victory()
   }
 }
@@ -312,6 +313,8 @@ function expandShown(board, elCell, cellI, cellJ) {
     for (var j = cellJ - 1; j <= cellJ + 1; j++) {
       if (j < 0 || j >= board[i].length) continue;
       if (i === cellI && j === cellJ) continue;
+
+      if(board[i][j].isMarked) continue
 
       // Update the model
 
@@ -364,9 +367,9 @@ function chooseLevel(elBtn) {
     gLevel.MINES = 30
 
   }
-  // elSpan.innerText = NORMAL_IMG
-  // clearInterval(gTimer)
-  // gTimer = 0
+  elSpan.innerText = NORMAL_IMG
+  clearInterval(gTimer)
+  gTimer = 0
   initGame()
 }
 
@@ -401,6 +404,8 @@ function victory() {
   var audio = new Audio('sounds/win.mp3')
   audio.play();
 
+  console.log('gTimer:', gTimer)
+
   elSpan.innerText = WIN_IMG
   elDiv.innerText = WINNER_IMG
   clearInterval(gTimer)
@@ -422,6 +427,19 @@ function timer() {
 }
 
 // Bonuses:
+
+const open = document.getElementById('open')
+const modal_container = document.getElementById('modal-container')
+const close = document.getElementById('close')
+
+open.addEventListener('click', () => {
+  modal_container.classList.add('show')
+})
+
+close.addEventListener('click', () => {
+  modal_container.classList.remove('show')
+})
+
 
 
 
